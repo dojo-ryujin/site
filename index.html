@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Dojo Ryujin</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+		<script>
+			window.onload = ()=>{
+			for(let i = 0; i <= 4; i++){
+				let t = Array.from(document.querySelectorAll(`tr td:nth-of-type(${i})`))
+				t = t.map(e=>[e.parentNode.previousElementSibling, e])
+				t = t.filter(([p, e])=>p !== null)
+				t = t.map(([p, e])=>[p.querySelector(`td:nth-of-type(${i})`), e])
+				t = t.filter(([p, e])=>p !== null)
+				let d = t.filter(([p, e])=>p.className !== e.className)
+				d.forEach(([p, e])=>{e.style.borderTop = 'solid 0px #fff0'})
+				
+				d = t.filter(([p, e])=>p.className === e.className)
+				
+				d.forEach(([p, e])=>{
+
+					//1h de cours
+					e.style.color = '#fff0'
+					p.style.color = 'white'
+					p.querySelector('p').style.position = 'relative'
+					p.querySelector('p').style.top = '1em'
+				})
+				
+				d = d.map(([p, e])=>[p.parentNode.previousElementSibling, e])
+				d = d.filter(([p, e])=>p !== null)
+				d = d.map(([p, e])=>[p.querySelector(`td:nth-of-type(${i})`), e])
+				d = d.filter(([p, e])=>p !== null)
+
+				
+				let v = d.filter(([p, e])=>p.className === e.className)
+				v.forEach(([p, e])=>{
+console.log(p, e)
+					//1h30 de cours
+					p.style.color = '#fff0'
+					p.querySelector('p').style.position = 'initial'
+					//console.log(p, p.parentNode.nextElementSibling.querySelector(`td:nth-of-type(${i})`))
+					p.parentNode.nextElementSibling.querySelector(`td:nth-of-type(${i}) p`).style.position = 'initial'
+					p.parentNode.nextElementSibling.querySelector(`td:nth-of-type(${i})`).style.color = 'white'
+
+// p.parentNode.nextElementSibling.nextElementSibling.querySelector(`td:nth-of-type(${i})`))
+					//p.style.color = 'grey'
+					//p.parentNode.nextElementSibling.style.color = 'black !important'
+				})
+				
+				d = d.map(([p, e])=>[p.parentNode.previousElementSibling, e])
+				d = d.filter(([p, e])=>p !== null)
+				d = d.map(([p, e])=>[p.querySelector(`td:nth-of-type(${i})`), e])
+				d = d.filter(([p, e])=>p !== null)
+
+				d = d.filter(([p, e])=>p.className === e.className)
+				d.forEach(([p, e])=>{
+
+					//2h de cours
+					console.log(p, p.parentNode.nextElementSibling.querySelector(`td:nth-of-type(${i})`))
+					p.parentNode.nextElementSibling.querySelector(`td:nth-of-type(${i})`).style.color = 'white'
+					p.parentNode.nextElementSibling.querySelector(`td:nth-of-type(${i}) p`).style.position = 'relative'
+					p.parentNode.nextElementSibling.querySelector(`td:nth-of-type(${i}) p`).style.top = 'calc(5px + 1em)'
+					p.parentNode.nextElementSibling.nextElementSibling.querySelector(`td:nth-of-type(${i})`).style.color = '#fff0'
+
+				})
+			}
+			}
+		</script>
+	</head>
+
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<a href="#disciplines">Les disciplines</a>
+				</li>
+				<li>
+					<a href="#horaires">Les horaires</a>
+				</li>
+				<li>
+					<a href="#plan">Plan d'accès</a>
+				</li>
+				<li>
+					<a href="#tarifs">Tarifs</a>
+				</li>
+				<li>
+					<a href="#contact">Nous contacter</a>
+				</li>
+
+			</ul>
+		</nav>
+
+		<div id="content">
+		<h1>Dojo Ryujin</h1>
+
+		<div id="disciplines">
+			<h2></h2>
+
+			<h3>Aikido</h3>
+			<p></p>
+			<h3>Aikitaiso</h3>
+			<p>
+			AÏKI vient du mot AÏKIDO : union (harmonie) des énergies, et du mot TAÏSO : gymnastique.
+			<br><br>
+			C’est une préparation douce basée sur les mouvements d’Aïkido et des pratiques de santé transmises notamment par TAMURA Senseï.
+			<br><br>
+			L’AÏKI TAÏSO regroupe une grande variété d’exercices : méditation, concentration, respiration, travail sur l'énergie, assouplissement, renforcement musculaire profond, déplacements (Taï-Sabaki), chutes (Ukemis), mouvements du corps, relâchement, relaxation, massages.
+			<br><br>
+			L’AÏKI TAÏSO est une méthode qui permet de renforcer la santé physique et mentale. Cette méthode, source de bien-être améliore aussi la coordination et l’équilibre.
+			<br><br>
+			Cette discipline s’adresse à tous sans limite d’âge : débutants (sportifs ou non), pratiquants confirmés en complément de l’Aïkido, femmes en pré ou post-natal, personnes en convalescence…
+			</p>
+			<h3>Étirements</h3>
+			<p></p>
+		</div>
+
+		<div id="horaires">
+			<h2>Horaires</h2>
+			<table>
+				<tr>
+					<td><p>&nbsp;</p></td>
+					<th>Mardi</th>
+					<th>Mercredi</th>
+					<th>Jeudi</th>
+					<th>Vendredi</th>
+				</tr>
+				<tr>
+					<th>15h</th>
+					<td class="aikitaiso pour-tous"><p>Aikitaiso Pour-tous</p></td>
+					<td class="etirements pour-tous"><p>Étirements Pour-tous</p></td>
+					<td class="aikitaiso pour-tous"><p>Aikitaiso Pour-tous</p></td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th>&nbsp;</th>
+					<td class="aikitaiso pour-tous"><p>Aikitaiso Pour-tous</p></td>
+					<td class="etirements pour-tous"><p>Étirements Pour-tous</p></td>
+					<td class="aikitaiso pour-tous"><p>Aikitaiso Pour-tous</p></td>
+				</tr>
+				<tr>
+					<th>16h</th>
+					<td class="aikido seniors"><p>Aikido Seniors</p></td>
+					<td class="aikido enfants"><p>Aikido Enfants</p></td>
+					<td class="aikido seniors"><p>Aikido Seniors</p></td>
+					<td class="etirements pour-tous"><p>Étirements Pour-tous</p></td>
+				</tr>
+				<tr>
+					<th>&nbsp;</th>
+					<td class="aikido seniors"><p>Aikido Seniors</p></td>
+					<td class="aikido enfants"><p>Aikido Enfants</p></td>
+					<td class="aikido seniors"><p>Aikido Seniors</p></td>
+					<td class="etirements pour-tous"><p>Étirements Pour-tous</p></td>
+				</tr>
+				<tr>
+					<th>17h</th>
+					<td class="aikido seniors"><p>Aikido Seniors</p></td>
+					<td class="aikido enfants"><p>Aikido Enfants</p></td>
+					<td class="aikido seniors"><p>Aikido Seniors</p></td>
+					<td class="aikitaiso pour-tous"><p>Aikitaiso Pour-tous</p></td>
+				</tr>
+				<tr>
+					<th>17h30</th>
+					<td class="aikido enfants"><p>Aikido Enfants</p></td>
+					<td class="aikido ados"><p>Aikido Ados</p></td>
+					<td class="aikido ados"><p>Aikido Ados</p></td>
+					<td class="aikitaiso pour-tous"><p>Aikitaiso Pour-tous</p></td>
+				</tr>
+				<tr>
+					<th>18h</th>
+					<td class="aikido enfants"><p>Aikido Enfants</p></td>
+					<td class="aikido ados"><p>Aikido Ados</p></td>
+					<td class="aikido ados"><p>Aikido Ados</p></td>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+				</tr>
+				<tr>
+					<th>&nbsp;</th>
+					<td><p>&nbsp;</p></td>
+					<td class="aikido ados"><p>Aikido Ados</p></td>
+					<td class="aikido ados"><p>Aikido Ados</p></td>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+				</tr>
+				<tr>
+					<th>19h</th>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+					<td><p>&nbsp;</p></td>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+				</tr>
+				<tr>
+					<th>&nbsp;</th>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+					<td><p>&nbsp;</p></td>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+				</tr>
+				<tr>
+					<th>20h</th>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+					<td><p>&nbsp;</p></td>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+					<td><p>&nbsp;</p></td>
+				</tr>
+				<tr>
+					<th>&nbsp;</th>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+					<td><p>&nbsp;</p></td>
+					<td class="aikido adultes"><p>Aikido Adultes</p></td>
+					<td><p>&nbsp;</p></td>
+				</tr>
+				<tr>
+					<th>21h</th>
+					<td><p>&nbsp;</p></td>
+					<td><p>&nbsp;</p></td>
+					<td><p>&nbsp;</p></td>
+					<td><p>&nbsp;</p></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="plan">
+			<h2>Plan d'accès</h2>
+			<p>Dojo Ryujin, dans une cour en impasse située en face du Conservatoire de musique et du FRAC : pas d'accès motorisé, nombreux parkings (représentés en indigo sur la carte) et arrêts de bus à proximité. Merci de respecter la tranquillité de la cour et de ses habitants.<p>
+			<iframe id="carte" width="100%" height="300px" frameborder="0" allowfullscreen src="https://umap.openstreetmap.fr/fr/map/dojo-ryujin_351834?scaleControl=true&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=null&onLoadPanel=undefined&captionBar=false&datalayers=948980"></iframe>
+		</div>
+
+		<div id="tarifs">
+			<h2>Tarifs (licence et assurance comprises) :</h2>
+			<p>
+				Cours d'essai gratuit<br><br>
+				Enfant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140€<br>
+				Adolescent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;150€<br>
+				Adulte/Senior&nbsp;&nbsp;&nbsp;&nbsp;160€<br>
+				<br>
+				Donne accès à l'ensemble des cours<br>
+				<br>Tarif réduit (-20€) famille, étudiant, autres situations...
+			</p>
+		</div>
+
+		<div id="contact">
+			<h2>Nous contacter</h2>
+			<p><a href="tel:0638485725">06 38 48 57 25</a></p>
+		</div>
+		</div>
+	</body>
+
+</html>

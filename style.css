@@ -1,0 +1,160 @@
+body{
+	width: fit-content;
+	width: -moz-fit-content;
+}
+#content{
+	margin: 0;
+	width: fit-content;
+	width: -moz-fit-content;
+	color:white;
+	background:#302b27;
+	background: linear-gradient(to right, #6d685e, #3f382e);
+	background: linear-gradient(to right, #80802b, #402c11);
+	background: url('./dragon-jaune.jpg'), linear-gradient(to right, #2f3011, #323112, #211809, #180f06);
+	  background-repeat: no-repeat;  
+  background-position: 0% 0%;
+  background-size: 100% auto;
+  padding:15px;
+  padding-top: 0px;
+}
+nav, nav *{
+	background:white;
+}
+*{
+	font-family: Dejavu Sans;
+	font-weight: lighter;
+}
+body, nav, nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+/*   NAV   */
+nav{
+	background: white;
+	display:block;
+	width:100%;
+}
+nav ul{
+	list-style: none;
+	display: inline-flex;
+}
+nav li{
+	display:flex; 
+}
+nav li a{
+	padding: 15px;
+	text-decoration: none;
+	color: black;
+	font-weight: normal;
+	cursor: pointer;
+	    pointer-events: auto;
+}
+nav a:hover{
+	background:black;
+	color:white !important;
+}
+
+/*   body   */
+h1{
+	text-align: center;
+	margin-top:0;
+	padding-top:2em;
+	padding-bottom:2em;
+	text-transform:uppercase;
+	font-size:70px;
+}
+h2{
+	margin-top:2em;
+	margin-bottom:1em;
+}
+
+body > div{
+	margin:15px;
+	margin-top:50px;
+}
+
+@media screen and (min-width: 768px) {
+	#carte{
+		height: 500px;
+	}
+}
+
+#horaires{
+	text-align:center;
+}
+
+#horaires h2{
+	text-align: left;
+}
+
+#horaires table{
+	border-collapse: collapse;
+	text-align:center;
+	max-width: calc(100% - 100px);
+	display: inline;
+}
+
+#horaires td, #horaires tr, #horaires th{
+	padding:0px;
+	border:solid #fff0 0px;
+	border-bottom:none;
+	border-top:none;
+	color: #fff0;
+}
+#horaires th{
+	color:white;
+	position: relative;
+	top: calc(-1em - 5px);
+	padding-right: 10px;
+}
+
+#horaires p{
+	margin: 0;
+	padding:10px;
+}
+
+.aikido{
+	background: #293462;
+	border-top: solid 0px red;
+}
+.aikido.seniors {
+    background: #216583;
+}
+.aikido.enfants {
+    background: #00818a;
+}
+.aikido.ados {
+	background: #4e61b3;
+}
+.aikido-armes{
+	background: #68713f;
+	border-top: solid 0px maroon;
+} 
+.aikitaiso{
+	background: #7a947d;
+	border-top: solid 0px green;
+} 
+.etirements{
+	background: #80770f;
+	background:#3093bf;
+	border-top: solid 0px blue;
+} 
+.self-defense{
+	background: #515b20;
+	border-top: solid 0px purple;
+}
+
+
+
+#contact a{
+	color: #627eff;
+}
+
+#disciplines h3{
+	font-size:20px;
+}
+
+#disciplines p{
+	margin-left: 20px;
+}
