@@ -152,9 +152,10 @@ body > div{
 }
 
 #disciplines h3{
-	font-size:20px;
+	margin-top:25px;
+	font-size:24px;
 }
 
 #disciplines p{
-	margin-left: 20px;
+	margin-left: 30px;
 }
